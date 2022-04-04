@@ -12,9 +12,9 @@ pipeline {
                 echo 'Hello checkout'
             }
         }
-         stage('packaging') {
+         stage('package') {
             steps {
-                echo 'Hello package'
+               bat 'mvn clean package'
             }
         }
     }
